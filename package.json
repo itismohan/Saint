@@ -1,0 +1,41 @@
+{
+  "name": "saint-app",
+  "version": "1.0.0",
+  "description": "SAINT: Smart AI for Integrated Next-gen Testing - Enterprise-level AI testing assistant",
+  "main": "src/main/main.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "node src/backend/server.js",
+    "dev:frontend": "cd src/frontend && npm run dev",
+    "install:frontend": "cd src/frontend && npm install",
+    "build": "npm run build:frontend",
+    "build:frontend": "cd src/frontend && npm run build",
+    "start": "npm run dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "testing",
+    "ai",
+    "playwright",
+    "mcp",
+    "automation",
+    "enterprise"
+  ],
+  "author": "SAINT Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "ws": "^8.14.2",
+    "uuid": "^9.0.1",
+    "fs-extra": "^11.1.1",
+    "openai": "^4.20.1",
+    "concurrently": "^8.2.2",
+    "@playwright/test": "^1.40.0",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
+
